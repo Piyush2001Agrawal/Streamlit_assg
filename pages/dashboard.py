@@ -97,3 +97,9 @@ fig11 =px.scatter_3d(df, x='Age', y='Orders', z='Amount',
                     template='plotly_dark',color_continuous_scale='Viridis')
 st.plotly_chart(fig11)
 st.markdown("This 3D scatter plot shows the Age, Orders, and Amount with size as Amount and colored by Gender")
+
+fig12= px.box(filtered_df, x='Gender', y='Amount', color='Gender', 
+       title='Amount Distribution by Gender',
+       template='plotly_dark')
+st.plotly_chart(fig12)
+st.markdown("This box plot shows the Amount Distribution by gender")
